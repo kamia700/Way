@@ -1,0 +1,87 @@
+.description__title {
+  position: relative;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: 2px;
+
+  margin-bottom: 45px;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: -12px;
+    left: 0;
+
+    width: 175px;
+    height: 2.92px;
+    background-image: url("../img/redline.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.description__text {
+  line-height: 28.5px;
+  letter-spacing: 0.7px;
+
+  margin-bottom: 47px;
+}
+
+.description__button {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  padding-bottom: 45px;
+  padding-right: 30px;
+  outline: none;
+}
+
+@media (max-width: $tablet-width) {
+  .description__title {
+    font-size: 30px;
+    line-height: 45px;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .description__text {
+    text-align: center;
+    letter-spacing: 0.7px;
+
+    padding: 3px 15px;
+    margin-bottom: 15px;
+  }
+
+  .description__button {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+
+    padding: 22px 47px;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: $width-mobile) {
+  .description__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .description__text {
+    margin-top: 15px;
+  }
+
+  .description__button {
+    padding: 19px 65px;
+  }
+}

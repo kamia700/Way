@@ -1,0 +1,58 @@
+.about {
+  position: relative;
+  background-image: url("../img/map@1x.png");
+  background-position: 50% 21%;
+  background-repeat: no-repeat;
+  background-size: 75%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map@2x.png");
+  }
+
+  display: flex;
+  flex-direction: column;
+}
+
+.about__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+
+  margin-bottom: 235px;
+}
+
+.about__offer {
+  display: flex;
+  margin-bottom: 138px;
+}
+
+
+@media (max-width: $tablet-width) {
+  .about {
+    background-image: none;
+  }
+
+  .about__tabs {
+    padding-top: 80px;
+    margin-bottom: 115px;
+    width: 100%;
+  }
+
+  .about__offer {
+    flex-direction: column;
+    width: 90%;
+
+    margin-bottom: 125px;
+  }
+}
+
+@media (max-width: $width-mobile) {
+  .about__tabs {
+    padding-top: 0;
+  }
+
+  .about__offer {
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+}

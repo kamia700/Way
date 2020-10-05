@@ -1,0 +1,215 @@
+.feedback {
+  position: relative;
+  background-image: url("../img/fb-bg@1x.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/fb-bg@2x.jpg");
+  }
+
+  min-height: 455px;
+  max-width: 1145px;
+}
+
+.feedback__block {
+  position: absolute;
+  background-color: $white--intro;
+  box-shadow: 0 4px 30px $box--shadow-01;
+  width: 57%;
+  min-height: 315px;
+  border-radius: 5px;
+
+  left: 45%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.8px;
+
+  margin-top: 52px;
+  margin-bottom: 0;
+}
+
+.feedback__text {
+  text-align: center;
+  letter-spacing: 0.9px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.feedback__form {
+  text-align: center;
+  width: 85%;
+
+  input {
+    padding: 15px;
+    width: 49%;
+  }
+
+  .feedback__button {
+    font-size: 12px;
+    line-height: 14.5px;
+
+    padding: 15px 45px;
+    min-height: 51px;
+    letter-spacing: 2px;
+  }
+}
+
+.feedback__info {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 23px;
+
+  .feedback__tel,
+  .feedback__mail {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1.5px;
+  }
+
+  .feedback__tel {
+    padding-left: 20px;
+  }
+}
+
+.feedback__tel,
+.feedback__mail {
+  &:focus {
+    outline: none;
+    border: 1px solid $color-tomato;
+  }
+
+  &:active {
+    outline: none;
+    border: 1px solid $color-tomato;
+  }
+
+  &:focus:invalid {
+    border: 2px solid $color-tomato;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .feedback {
+    background-image: url("../img/fb-bg-tablet@1x.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/fb-bg-tablet@2x.jpg");
+    }
+
+    width: 100%;
+  }
+
+  .feedback__block {
+    left: 7%;
+    min-height: 310px;
+    width: 86%;
+    top: 49%;
+  }
+
+  .feedback__title {
+    letter-spacing: 0.9px;
+  }
+
+  .feedback__text {
+    margin-bottom: 23px;
+    margin-top: 12px;
+  }
+
+  .feedback__info {
+    margin-bottom: 18px;
+    .feedback__tel,
+    .feedback__mail {
+      letter-spacing: 1px;
+    }
+
+    .feedback__tel {
+      padding-left: 25px;
+      margin-right: 20px;
+    }
+  }
+
+  .feedback__form {
+    .feedback__button {
+      padding: 15px 81px;
+      letter-spacing: 3px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+
+@media (max-width: $width-mobile) {
+  .feedback {
+    background-image: none;
+    background-color: $gray--burger;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: none;
+      background-color: $gray--burger;
+    }
+
+    min-height: 441px;
+  }
+
+  .feedback__title {
+    margin-top: 0;
+  }
+
+  .feedback__block {
+    background-color: $gray--burger;
+    box-shadow: none;
+    border-radius: none;
+
+    left: 50%;
+    top: 12%;
+
+    transform: translateX(-50%);
+
+    width: 96%;
+  }
+
+  .feedback__form {
+    width: 94%;
+
+    input {
+      width: 100%;
+    }
+
+    .feedback__button {
+      width: 100%;
+    }
+  }
+
+  .feedback__text {
+    margin-bottom: 18px;
+    margin-top: 17px;
+  }
+
+  .feedback__info {
+    flex-wrap: wrap;
+    margin-bottom: 19px;
+
+    .feedback__tel {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+}
